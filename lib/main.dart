@@ -1,27 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1337/screen/home_screen.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      home: Scaffold(
-        drawer: Drawer(),
-        appBar: AppBar(
-          title: Text(
-            "Lag switg on firewall rulse",
-          ),
-        ),
-        body: Center(
-          child: Text("331 G0"),
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          items: [
-            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.phone), label: "phone"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.dashboard_customize), label: "dashboard"),
-          ],
-        ),
-      ),
-    ),
-  );
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: HomeScreen(),
+    );
+  }
 }
